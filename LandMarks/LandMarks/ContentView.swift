@@ -9,9 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Turtle Rock first Commit")
-            .font(.title)
-            
+        VStack(alignment: .leading) {
+            Text("Turtle Rock")
+                .font(.title)
+            HStack {
+                Text("first Commit")
+                    .font(.subheadline)
+                Spacer()
+                Text("second Commit")
+                    .font(.subheadline)
+            }
+        }
+        .padding()
     }
 }
 
