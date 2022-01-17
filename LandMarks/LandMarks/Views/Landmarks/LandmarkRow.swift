@@ -1,9 +1,9 @@
-//
-//  LandMarkRow.swift
-//  LandMarks
-//
-//  Created by DEOKSHIN CHO on 2022/01/09.
-//
+/*
+See LICENSE folder for this sample’s licensing information.
+
+Abstract:
+A single row to be displayed in a list of landmarks.
+*/
 
 import SwiftUI
 
@@ -18,7 +18,7 @@ struct LandmarkRow: View {
             Text(landmark.name)
 
             Spacer()
-                        
+
             if landmark.isFavorite {
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
@@ -28,6 +28,8 @@ struct LandmarkRow: View {
 }
 
 struct LandmarkRow_Previews: PreviewProvider {
+    static var landmarks = ModelData().landmarks
+
     static var previews: some View {
         Group {
             LandmarkRow(landmark: landmarks[0])
